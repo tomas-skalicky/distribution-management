@@ -12,6 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<nexus.homeUrl>http://localhost:9080/nexus</nexus.homeUrl>
 	</properties>
 
 
@@ -19,12 +20,12 @@
 		<repository>
 			<id>nexus-deployment</id>
 			<name>Nexus Releases</name>
-			<url>dav:http://localhost:9080/nexus/content/repositories/releases</url>
+			<url>dav:${nexus.homeUrl}/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-deployment</id>
 			<name>Nexus Snapshots</name>
-			<url>dav:http://localhost:9080/nexus/content/repositories/snapshots</url>
+			<url>dav:${nexus.homeUrl}/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
